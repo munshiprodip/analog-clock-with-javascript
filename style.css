@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100%;
+}
+
+.container{
+    margin: 50px auto;
+    margin-top: 100px;
+    width: 500px;
+}
+h2{
+    text-align: center;
+    padding: 40px 0px;
+    text-transform: uppercase;
+}
+
+.round{
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 28px 0 #908080;
+    position: relative;
+}
+
+.hr-step{
+    height: 100%;
+    position: absolute;
+    left: calc(50% - 0.25em);
+}
+
+.hr-1{
+    transform: rotate(30deg);
+}
+.hr-2{
+    transform: rotate(60deg);
+}
+.hr-3{
+    transform: rotate(90deg);
+}
+.hr-4{
+    transform: rotate(120deg);
+}
+.hr-5{
+    transform: rotate(150deg);
+}
+.hr-6{
+    transform: rotate(180deg);
+}
+.hr-7{
+    transform: rotate(210deg);
+}
+.hr-8{
+    transform: rotate(240deg);
+}
+.hr-9{
+    transform: rotate(270deg);
+}
+.hr-10{
+    transform: rotate(300deg);
+}
+.hr-11{
+    transform: rotate(330deg);
+}
+.hr-12{
+    transform: rotate(360deg);
+}
+
+
+.scal{
+    transform-origin: 50% 80%;
+    position: absolute;
+}
+
+.hr-scal {
+    width: 5px;
+    height: 25%;
+    background-color: red;
+    top: 30%;
+    left: calc(50% + -2px);
+    z-index: 111;
+}
+
+.min-scal {
+    width: 3px;
+    height: 40%;
+    background-color: blue;
+    top: 18%;
+    left: calc(50% - 1px);
+    z-index: 222;
+}
+
+.sec-scal {
+    width: 1px;
+    height: 50%;
+    background-color: black;
+    top: 10%;
+    left: 50%;
+    z-index: 333;
+}
+
+.scal-ball{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #010101;
+    z-index: 555;
+}
+
+#digital{
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    background: #010101;
+    color: #fff;
+    font-size: 25px;
+    box-shadow: inset 3px 3px 0px #7b7373;
+}

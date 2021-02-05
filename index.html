@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock | JavaScript setInterval function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="round">
+                <div class="hr-step hr-12"> ||</div>
+                <div class="hr-step hr-1">||</div>
+                <div class="hr-step hr-2">||</div>
+                <div class="hr-step hr-3">||</div>
+                <div class="hr-step hr-4">||</div>
+                <div class="hr-step hr-5">||</div>
+                <div class="hr-step hr-6">||</div>
+                <div class="hr-step hr-7">||</div>
+                <div class="hr-step hr-8">||</div>
+                <div class="hr-step hr-9">||</div>
+                <div class="hr-step hr-10">||</div>
+                <div class="hr-step hr-11">||</div>
+
+                <div id="hr-scal" class="hr-scal scal"></div>
+                <div id="min-scal" class="min-scal scal"></div>
+                <div id="sec-scal" class="sec-scal scal"></div>
+
+                <div class="scal-ball"></div>
+                <div id="digital"></div>
+            </div>
+            <h2>Analog Clock using HTML, CSS &amp; JavaScript</h2>
+        </div>
+
+        
+    </main>
+
+
+    <script>
+        setInterval(function(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            if (s<10) {
+                s = '0'+s;
+            }
+        
+            var time = `${h} : ${m} : ${s}`
+
+            var rotateH = `rotate(${h*30+m*.5}deg)`
+            var rotateM = `rotate(${m*6}deg)`
+            var rotateS = `rotate(${s*6}deg)`
+
+            document.getElementById('hr-scal').style.transform = rotateH
+            document.getElementById('min-scal').style.transform = rotateM
+            document.getElementById('sec-scal').style.transform = rotateS
+            
+            document.getElementById('digital').innerHTML = time
+        }, 1000);
+    </script>
+</body>
+</html>
