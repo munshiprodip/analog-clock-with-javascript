@@ -18,6 +18,7 @@ h2{
     text-transform: uppercase;
 }
 
+/* clock frame */
 .round{
     width: 500px;
     height: 500px;
@@ -28,6 +29,7 @@ h2{
     position: relative;
 }
 
+/* style for hours steps */
 .hr-step{
     height: 100%;
     position: absolute;
@@ -71,7 +73,7 @@ h2{
     transform: rotate(360deg);
 }
 
-
+/* clock scal */
 .scal{
     transform-origin: 50% 80%;
     position: absolute;
@@ -116,6 +118,7 @@ h2{
     z-index: 555;
 }
 
+/* digital clock */
 #digital{
     position: absolute;
     left: 55px;
