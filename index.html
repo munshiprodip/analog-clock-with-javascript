@@ -43,6 +43,7 @@
             var h = date.getHours();
             var m = date.getMinutes();
             var s = date.getSeconds();
+            var ms = date.getMilliseconds();
             if (s<10) {
                 s = '0'+s;
             }
@@ -51,14 +52,14 @@
 
             var rotateH = `rotate(${h*30+m*.5}deg)`
             var rotateM = `rotate(${m*6}deg)`
-            var rotateS = `rotate(${s*6}deg)`
+            var rotateS = `rotate(${s*6+ms*.006}deg)`
 
             document.getElementById('hr-scal').style.transform = rotateH
             document.getElementById('min-scal').style.transform = rotateM
             document.getElementById('sec-scal').style.transform = rotateS
             
             document.getElementById('digital').innerHTML = time
-        }, 1000);
+        }, 25);
     </script>
 </body>
 </html>
